@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpotifyPlayerLibrary", "Spo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpotifyPlayerWPF", "..\SpotifyPlayerWPF\SpotifyPlayerWPF.csproj", "{71724A05-89D2-4168-88C4-AA6BE6C5D3E3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpotifyPlayerConsoleApp", "..\SpotifyPlayerConsoleApp\SpotifyPlayerConsoleApp.csproj", "{C3347B65-8453-4565-AE12-88E7684AD111}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{71724A05-89D2-4168-88C4-AA6BE6C5D3E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{71724A05-89D2-4168-88C4-AA6BE6C5D3E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{71724A05-89D2-4168-88C4-AA6BE6C5D3E3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C3347B65-8453-4565-AE12-88E7684AD111}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C3347B65-8453-4565-AE12-88E7684AD111}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C3347B65-8453-4565-AE12-88E7684AD111}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C3347B65-8453-4565-AE12-88E7684AD111}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
