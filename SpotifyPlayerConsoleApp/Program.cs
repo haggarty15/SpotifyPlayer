@@ -8,13 +8,10 @@ namespace SpotifyPlayerConsoleApp
     {
         static async Task Main()
         {
-
-
             var config = SpotifyClientConfig.CreateDefault();
 
             var request = new ClientCredentialsRequest("f749aaeab36744b6b763119da2cd9d73", "18789c2c949b4008add5a37ddfd6fbef");
             var response = await new OAuthClient(config).RequestToken(request);
-
             var spotify = new SpotifyClient(config.WithToken(response.AccessToken));
 
             var track = await spotify.Tracks.Get("6by8WKAE9av5RFQPXacwUS");
