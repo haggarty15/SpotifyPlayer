@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using SpotifyAPI.Web;
 
@@ -17,7 +18,15 @@ namespace SpotifyPlayerConsoleApp
             var track = await spotify.Tracks.Get("6by8WKAE9av5RFQPXacwUS");
 
             string trackName = track.Name;
-            var artists = track.Artists;
+            var artistsList = track.Artists;
+            IList<string> artistsNameList = new List<string>();
+
+            foreach(SimpleArtist artist in artistsList)
+            {
+                artistsNameList.Add(artist.Name);
+            }
+            string artists = string.Join(", ", artistsNameList);
+
             string albumName = track.Album.Name;
             int duration = track.DurationMs;
 
