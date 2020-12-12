@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using SpotifyAPI.Web;
 
@@ -17,18 +18,27 @@ namespace SpotifyPlayerConsoleApp
             var track = await spotify.Tracks.Get("6by8WKAE9av5RFQPXacwUS");
 
             string trackName = track.Name;
-            var artists = track.Artists;
+            var artistsList = track.Artists;
+            IList<string> artistsNameList = new List<string>();
+
+            foreach(SimpleArtist artist in artistsList)
+            {
+                artistsNameList.Add(artist.Name);
+            }
+            string artists = string.Join(", ", artistsNameList);
+
             string albumName = track.Album.Name;
             int duration = track.DurationMs;
 
-            /**
             //need to find a way to convert currently playing song Item JSON to values..... if possible
             var currentlyPlayingType = new PlayerCurrentlyPlayingRequest();
-            currentlyPlayingType.Market = "EN";
+            currentlyPlayingType.Market = "GB";
+
+         /**
             var currentSong = await spotify.Player.GetCurrentlyPlaying(currentlyPlayingType);
             var currentSongItem = currentSong.Item;
             var itemConverter = new SpotifyAPI.Web.PlayableItemConverter();
-            **/
+         **/
             
             Console.WriteLine($"Track Name is - {trackName} ");
             Console.WriteLine($"Artists are - {artists}");
