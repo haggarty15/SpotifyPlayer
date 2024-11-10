@@ -27,6 +27,10 @@ def get_spotify_token():
     return response_data.get("access_token")
 
 
+# Query Reqs.
+# Artist List OR Genre
+# Pace OR BPM
+
 @app.route('/search', methods=['GET'])
 def search_spotify():
     query = request.args.get('query')
